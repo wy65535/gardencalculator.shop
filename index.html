@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free garden calculator tools to plan your vegetable garden, calculate plant spacing, garden bed size, soil amount, companion planting guide, and planting schedule. Grow a successful garden with our comprehensive calculators.">
+    <meta name="keywords" content="grow a garden calculator, garden planning calculator, vegetable garden calculator, garden space calculator, plant spacing calculator, garden bed calculator, raised garden bed calculator, companion planting, planting schedule calculator, garden soil calculator, garden layout planner">
+    <meta name="author" content="Garden Calculator">
+    <meta property="og:title" content="Grow a Garden Calculator - Complete Garden Planning Tools">
+    <meta property="og:description" content="Free garden calculator tools for planning, spacing, soil, and planting schedules. Everything you need to grow a successful garden.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gardencalculator.shop">
+    <title>Grow a Garden Calculator - Free Garden Planning Tools & Calculators</title>
+    <link rel="canonical" href="https://gardencalculator.shop">
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Grow a Garden Calculator",
+        "description": "Comprehensive garden planning calculators and tools",
+        "url": "https://gardencalculator.shop",
+        "applicationCategory": "UtilityApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <h1 class="logo">🌱 Grow a Garden Calculator</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#calculators">Calculators</a></li>
+                    <li><a href="#guide">Guide</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Grow a Garden Calculator - Your Complete Garden Planning Toolkit</h1>
+                <p class="hero-subtitle">Free online calculators to help you plan, design, and grow the perfect garden. Calculate plant spacing, garden bed sizes, soil amounts, planting schedules, and more!</p>
+                <div class="hero-features">
+                    <div class="feature-badge">✓ Garden Space Calculator</div>
+                    <div class="feature-badge">✓ Plant Spacing Calculator</div>
+                    <div class="feature-badge">✓ Soil Calculator</div>
+                    <div class="feature-badge">✓ Companion Planting Guide</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section id="calculators" class="calculators-section">
+            <div class="container">
+                <h2>Garden Planning Calculators</h2>
+                
+                <!-- Garden Space & Plant Quantity Calculator -->
+                <div class="calculator-card">
+                    <h3>🌿 Garden Space & Plant Quantity Calculator</h3>
+                    <p>Calculate how many plants you can grow in your garden bed based on spacing requirements.</p>
+                    
+                    <div class="calculator-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="garden-length">Garden Bed Length</label>
+                                <div class="input-group">
+                                    <input type="number" id="garden-length" min="0" step="0.1" placeholder="10">
+                                    <select id="length-unit">
+                                        <option value="feet">feet</option>
+                                        <option value="meters">meters</option>
+                                        <option value="inches">inches</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="garden-width">Garden Bed Width</label>
+                                <div class="input-group">
+                                    <input type="number" id="garden-width" min="0" step="0.1" placeholder="4">
+                                    <select id="width-unit">
+                                        <option value="feet">feet</option>
+                                        <option value="meters">meters</option>
+                                        <option value="inches">inches</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="plant-spacing">Plant Spacing</label>
+                                <div class="input-group">
+                                    <input type="number" id="plant-spacing" min="0" step="0.1" placeholder="12">
+                                    <select id="spacing-unit">
+                                        <option value="inches">inches</option>
+                                        <option value="feet">feet</option>
+                                        <option value="cm">cm</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="plant-type-spacing">Or Select Plant Type</label>
+                                <select id="plant-type-spacing">
+                                    <option value="">Custom spacing</option>
+                                    <option value="6">Lettuce (6")</option>
+                                    <option value="12">Tomatoes (12")</option>
+                                    <option value="18">Peppers (18")</option>
+                                    <option value="24">Squash (24")</option>
+                                    <option value="36">Pumpkins (36")</option>
+                                    <option value="4">Carrots (4")</option>
+                                    <option value="8">Beans (8")</option>
+                                    <option value="12">Cucumbers (12")</option>
+                                    <option value="15">Broccoli (15")</option>
+                                    <option value="18">Cabbage (18")</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button onclick="calculatePlantQuantity()" class="btn-primary">Calculate Plant Quantity</button>
+                        
+                        <div id="plant-quantity-result" class="result-box" style="display:none;">
+                            <h4>Results:</h4>
+                            <div class="result-content"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Raised Garden Bed Soil Calculator -->
+                <div class="calculator-card">
+                    <h3>🪴 Raised Garden Bed Soil Calculator</h3>
+                    <p>Calculate the amount of soil, compost, and amendments needed for your raised garden bed.</p>
+                    
+                    <div class="calculator-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bed-length">Bed Length</label>
+                                <div class="input-group">
+                                    <input type="number" id="bed-length" min="0" step="0.1" placeholder="8">
+                                    <select id="bed-length-unit">
+                                        <option value="feet">feet</option>
+                                        <option value="meters">meters</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="bed-width">Bed Width</label>
+                                <div class="input-group">
+                                    <input type="number" id="bed-width" min="0" step="0.1" placeholder="4">
+                                    <select id="bed-width-unit">
+                                        <option value="feet">feet</option>
+                                        <option value="meters">meters</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="bed-depth">Bed Depth</label>
+                                <div class="input-group">
+                                    <input type="number" id="bed-depth" min="0" step="0.1" placeholder="12">
+                                    <select id="bed-depth-unit">
+                                        <option value="inches">inches</option>
+                                        <option value="feet">feet</option>
+                                        <option value="cm">cm</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="soil-mix">Soil Mix Type</label>
+                            <select id="soil-mix">
+                                <option value="standard">Standard Mix (60% topsoil, 30% compost, 10% vermiculite)</option>
+                                <option value="veggie">Vegetable Garden Mix (50% topsoil, 40% compost, 10% perlite)</option>
+                                <option value="mel">Mel's Mix (1/3 compost, 1/3 peat moss, 1/3 vermiculite)</option>
+                                <option value="custom">Custom Mix</option>
+                            </select>
+                        </div>
+                        
+                        <button onclick="calculateSoil()" class="btn-primary">Calculate Soil Amount</button>
+                        
+                        <div id="soil-result" class="result-box" style="display:none;">
+                            <h4>Results:</h4>
+                            <div class="result-content"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Planting Schedule Calculator -->
+                <div class="calculator-card">
+                    <h3>📅 Planting Schedule Calculator</h3>
+                    <p>Calculate the best planting dates for your garden based on your location and frost dates.</p>
+                    
+                    <div class="calculator-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="location">Your Location (City, State)</label>
+                                <input type="text" id="location" placeholder="e.g., Denver, Colorado">
+                            </div>
+                            <div class="form-group">
+                                <label for="hardiness-zone">USDA Hardiness Zone</label>
+                                <select id="hardiness-zone">
+                                    <option value="">Select Zone</option>
+                                    <option value="3">Zone 3 (-40°F to -30°F)</option>
+                                    <option value="4">Zone 4 (-30°F to -20°F)</option>
+                                    <option value="5">Zone 5 (-20°F to -10°F)</option>
+                                    <option value="6">Zone 6 (-10°F to 0°F)</option>
+                                    <option value="7">Zone 7 (0°F to 10°F)</option>
+                                    <option value="8">Zone 8 (10°F to 20°F)</option>
+                                    <option value="9">Zone 9 (20°F to 30°F)</option>
+                                    <option value="10">Zone 10 (30°F to 40°F)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="last-frost">Last Spring Frost Date</label>
+                                <input type="date" id="last-frost">
+                            </div>
+                            <div class="form-group">
+                                <label for="first-frost">First Fall Frost Date</label>
+                                <input type="date" id="first-frost">
+                            </div>
+                        </div>
+                        
+                        <button onclick="calculatePlantingSchedule()" class="btn-primary">Generate Planting Schedule</button>
+                        
+                        <div id="schedule-result" class="result-box" style="display:none;">
+                            <h4>Your Personalized Planting Schedule:</h4>
+                            <div class="result-content"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Companion Planting Calculator -->
+                <div class="calculator-card">
+                    <h3>🤝 Companion Planting Guide</h3>
+                    <p>Discover which plants grow well together and which ones to keep apart for a thriving garden.</p>
+                    
+                    <div class="calculator-form">
+                        <div class="form-group">
+                            <label for="main-plant">Select Your Plant</label>
+                            <select id="main-plant">
+                                <option value="">Choose a plant...</option>
+                                <option value="tomatoes">Tomatoes</option>
+                                <option value="peppers">Peppers</option>
+                                <option value="lettuce">Lettuce</option>
+                                <option value="carrots">Carrots</option>
+                                <option value="beans">Beans</option>
+                                <option value="peas">Peas</option>
+                                <option value="cucumbers">Cucumbers</option>
+                                <option value="squash">Squash</option>
+                                <option value="corn">Corn</option>
+                                <option value="broccoli">Broccoli</option>
+                                <option value="cabbage">Cabbage</option>
+                                <option value="onions">Onions</option>
+                                <option value="garlic">Garlic</option>
+                                <option value="spinach">Spinach</option>
+                                <option value="radishes">Radishes</option>
+                            </select>
+                        </div>
+                        
+                        <button onclick="showCompanionPlants()" class="btn-primary">Find Companion Plants</button>
+                        
+                        <div id="companion-result" class="result-box" style="display:none;">
+                            <div class="result-content"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Harvest Time Calculator -->
+                <div class="calculator-card">
+                    <h3>⏰ Harvest Time Calculator</h3>
+                    <p>Calculate when your vegetables will be ready for harvest based on planting date.</p>
+                    
+                    <div class="calculator-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="plant-variety">Plant Type</label>
+                                <select id="plant-variety">
+                                    <option value="">Select plant...</option>
+                                    <option value="tomatoes">Tomatoes (60-85 days)</option>
+                                    <option value="peppers">Peppers (60-90 days)</option>
+                                    <option value="lettuce">Lettuce (30-60 days)</option>
+                                    <option value="carrots">Carrots (50-80 days)</option>
+                                    <option value="beans">Beans (50-60 days)</option>
+                                    <option value="peas">Peas (50-70 days)</option>
+                                    <option value="cucumbers">Cucumbers (50-70 days)</option>
+                                    <option value="squash">Squash (45-60 days)</option>
+                                    <option value="corn">Corn (60-100 days)</option>
+                                    <option value="broccoli">Broccoli (50-70 days)</option>
+                                    <option value="cabbage">Cabbage (60-105 days)</option>
+                                    <option value="radishes">Radishes (20-30 days)</option>
+                                    <option value="spinach">Spinach (40-50 days)</option>
+                                    <option value="zucchini">Zucchini (35-55 days)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="planting-date">Planting Date</label>
+                                <input type="date" id="planting-date">
+                            </div>
+                        </div>
+                        
+                        <button onclick="calculateHarvestTime()" class="btn-primary">Calculate Harvest Date</button>
+                        
+                        <div id="harvest-result" class="result-box" style="display:none;">
+                            <h4>Harvest Information:</h4>
+                            <div class="result-content"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Watering Calculator -->
+                <div class="calculator-card">
+                    <h3>💧 Garden Watering Calculator</h3>
+                    <p>Calculate how much water your garden needs based on climate, plant type, and garden size.</p>
+                    
+                    <div class="calculator-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="garden-area">Garden Area</label>
+                                <div class="input-group">
+                                    <input type="number" id="garden-area" min="0" step="0.1" placeholder="100">
+                                    <select id="area-unit">
+                                        <option value="sqft">sq ft</option>
+                                        <option value="sqm">sq m</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="climate">Climate</label>
+                                <select id="climate">
+                                    <option value="hot-dry">Hot & Dry (1.5" per week)</option>
+                                    <option value="warm">Warm (1.0" per week)</option>
+                                    <option value="moderate">Moderate (0.75" per week)</option>
+                                    <option value="cool">Cool (0.5" per week)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="plant-water-need">Plant Water Needs</label>
+                            <select id="plant-water-need">
+                                <option value="high">High (Tomatoes, Peppers, Squash)</option>
+                                <option value="medium">Medium (Beans, Lettuce, Broccoli)</option>
+                                <option value="low">Low (Herbs, Root Vegetables)</option>
+                            </select>
+                        </div>
+                        
+                        <button onclick="calculateWatering()" class="btn-primary">Calculate Water Needs</button>
+                        
+                        <div id="watering-result" class="result-box" style="display:none;">
+                            <h4>Watering Recommendations:</h4>
+                            <div class="result-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Garden Planning Guide -->
+        <section id="guide" class="guide-section">
+            <div class="container">
+                <h2>Complete Guide to Growing a Garden</h2>
+                
+                <div class="guide-content">
+                    <article class="guide-article">
+                        <h3>How to Use Our Garden Calculator Tools</h3>
+                        <p>Our comprehensive garden calculator suite helps you plan every aspect of your garden, from initial bed design to harvest time. Here's how to get the most out of our tools:</p>
+                        
+                        <h4>1. Start with Space Planning</h4>
+                        <p>Use the <strong>Garden Space & Plant Quantity Calculator</strong> to determine how many plants will fit in your available space. This calculator considers proper plant spacing to ensure healthy growth and adequate air circulation. Whether you're growing tomatoes that need 12 inches of space or lettuce that only needs 6 inches, our calculator will give you accurate plant counts.</p>
+                        
+                        <h4>2. Calculate Soil Requirements</h4>
+                        <p>The <strong>Raised Garden Bed Soil Calculator</strong> helps you determine exactly how much soil, compost, and amendments you need. Choose from popular soil mixes like Mel's Mix or create a custom blend. This prevents waste and ensures you have enough materials before you start building.</p>
+                        
+                        <h4>3. Plan Your Planting Schedule</h4>
+                        <p>Timing is crucial in gardening. Our <strong>Planting Schedule Calculator</strong> considers your hardiness zone and frost dates to recommend the best times to plant each vegetable. This maximizes your growing season and helps avoid frost damage.</p>
+                        
+                        <h4>4. Use Companion Planting</h4>
+                        <p>The <strong>Companion Planting Guide</strong> helps you design a garden where plants support each other. Some plants deter pests, improve soil, or provide shade for others. This natural approach reduces the need for pesticides and increases yields.</p>
+                        
+                        <h4>5. Track Harvest Times</h4>
+                        <p>The <strong>Harvest Time Calculator</strong> helps you plan succession planting and know when to expect your vegetables. This allows you to stagger plantings for a continuous harvest throughout the season.</p>
+                        
+                        <h4>6. Calculate Water Needs</h4>
+                        <p>Proper watering is essential for a healthy garden. Our <strong>Watering Calculator</strong> considers your climate, plant types, and garden size to provide specific watering recommendations, helping you conserve water while keeping plants thriving.</p>
+                    </article>
+                    
+                    <article class="guide-article">
+                        <h3>Vegetable Garden Planning Tips</h3>
+                        <ul>
+                            <li><strong>Choose the Right Location:</strong> Most vegetables need 6-8 hours of direct sunlight daily. Use our calculators to maximize space in sunny areas.</li>
+                            <li><strong>Start Small:</strong> A 4x8 foot raised bed is perfect for beginners. Our soil calculator will show you need about 10-12 cubic feet of soil.</li>
+                            <li><strong>Improve Soil Quality:</strong> Good soil is the foundation of a successful garden. Our calculator recommends proper soil mixes with compost for nutrients.</li>
+                            <li><strong>Practice Crop Rotation:</strong> Don't plant the same family of vegetables in the same spot year after year. This prevents soil depletion and disease buildup.</li>
+                            <li><strong>Use Succession Planting:</strong> Plant new crops every 2-3 weeks for continuous harvests. Our planting schedule helps you plan this.</li>
+                            <li><strong>Consider Vertical Growing:</strong> Trellises and stakes save space. Calculate vertical spacing for pole beans, cucumbers, and tomatoes.</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="guide-article">
+                        <h3>Common Garden Planning Mistakes to Avoid</h3>
+                        <ul>
+                            <li><strong>Overcrowding Plants:</strong> Use our spacing calculator to ensure proper distance between plants for air circulation and growth.</li>
+                            <li><strong>Wrong Soil Depth:</strong> Different vegetables need different soil depths. Tomatoes need 12-18 inches, while lettuce needs only 6-8 inches.</li>
+                            <li><strong>Ignoring Companion Planting:</strong> Some plants hurt each other's growth. Check our companion planting guide before designing your layout.</li>
+                            <li><strong>Poor Timing:</strong> Planting too early or late affects yields. Use our planting schedule based on your specific frost dates.</li>
+                            <li><strong>Inadequate Water:</strong> Both overwatering and underwatering harm plants. Follow our calculator's watering recommendations for your climate.</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="guide-article">
+                        <h3>Raised Bed Garden Calculator Guide</h3>
+                        <p>Raised bed gardening offers numerous advantages including better drainage, warmer soil in spring, and easier maintenance. Here's how to use our calculators for raised bed planning:</p>
+                        
+                        <h4>Optimal Raised Bed Dimensions</h4>
+                        <ul>
+                            <li><strong>Width:</strong> 3-4 feet is ideal for easy reach from both sides</li>
+                            <li><strong>Length:</strong> 6-8 feet is common, but any length works</li>
+                            <li><strong>Height:</strong> 10-12 inches minimum, 18-24 inches for root vegetables</li>
+                        </ul>
+                        
+                        <h4>Soil Mix Calculator Results</h4>
+                        <p>For a 4x8x1 foot raised bed, you'll need approximately 32 cubic feet of soil. Our calculator breaks this down into components based on your chosen mix type:</p>
+                        <ul>
+                            <li>Standard Mix: 19.2 cu ft topsoil, 9.6 cu ft compost, 3.2 cu ft vermiculite</li>
+                            <li>Vegetable Mix: 16 cu ft topsoil, 12.8 cu ft compost, 3.2 cu ft perlite</li>
+                            <li>Mel's Mix: 10.7 cu ft each of compost, peat moss, and vermiculite</li>
+                        </ul>
+                    </article>
+                    
+                    <article class="guide-article">
+                        <h3>Plant Spacing Requirements by Vegetable Type</h3>
+                        <p>Proper spacing is critical for healthy plant growth, disease prevention, and maximum yields. Our plant quantity calculator uses these standard spacing guidelines:</p>
+                        
+                        <div class="spacing-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Vegetable</th>
+                                        <th>Spacing</th>
+                                        <th>Row Spacing</th>
+                                        <th>Plants per Sq Ft</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Tomatoes</td><td>12-18"</td><td>24-36"</td><td>1</td></tr>
+                                    <tr><td>Peppers</td><td>12-18"</td><td>18-24"</td><td>1</td></tr>
+                                    <tr><td>Lettuce</td><td>6-8"</td><td>12"</td><td>4</td></tr>
+                                    <tr><td>Carrots</td><td>2-4"</td><td>12-18"</td><td>16</td></tr>
+                                    <tr><td>Beans (Bush)</td><td>4-6"</td><td>18-24"</td><td>9</td></tr>
+                                    <tr><td>Cucumbers</td><td>12"</td><td>36-60"</td><td>2</td></tr>
+                                    <tr><td>Squash</td><td>24-36"</td><td>36-48"</td><td>1</td></tr>
+                                    <tr><td>Broccoli</td><td>15-18"</td><td>24-36"</td><td>1</td></tr>
+                                    <tr><td>Radishes</td><td>2"</td><td>12"</td><td>16</td></tr>
+                                    <tr><td>Spinach</td><td>3-6"</td><td>12-18"</td><td>9</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions (FAQ)</h2>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>How do I calculate how many plants I can grow in my garden?</h3>
+                        <p>Use our Garden Space & Plant Quantity Calculator by entering your garden bed dimensions and the spacing required for your chosen plants. The calculator divides your total area by the space each plant needs, accounting for proper spacing to ensure healthy growth. For example, a 4x8 foot bed (32 sq ft) can hold 32 lettuce plants at 6-inch spacing, but only 8 tomato plants at 12-inch spacing.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>How much soil do I need for a raised garden bed?</h3>
+                        <p>Use our Raised Garden Bed Soil Calculator to determine the exact amount. Multiply length × width × depth to get cubic feet. For example, a 4ft × 8ft × 1ft bed needs 32 cubic feet of soil. Our calculator also breaks down the components if you're making your own soil mix, showing how much topsoil, compost, and amendments you need.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>What is companion planting and why is it important?</h3>
+                        <p>Companion planting is growing different plants together for mutual benefits. Some plants repel pests that attack their neighbors, while others improve soil nutrients or provide shade. For example, planting basil near tomatoes can repel aphids and whiteflies, while beans add nitrogen to the soil that benefits corn. Our Companion Planting Guide shows you which combinations work best.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>When should I start planting my vegetable garden?</h3>
+                        <p>The best planting time depends on your USDA hardiness zone and local frost dates. Use our Planting Schedule Calculator by entering your location and frost dates. Cool-season crops like lettuce and peas can be planted 4-6 weeks before the last frost, while warm-season crops like tomatoes and peppers should wait until after the last frost date. Our calculator provides specific dates for each vegetable type.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>How often should I water my vegetable garden?</h3>
+                        <p>Most vegetable gardens need 1-2 inches of water per week, but this varies by climate, soil type, and plant maturity. Our Watering Calculator considers your specific conditions. In hot, dry climates, you may need to water daily. Clay soil retains moisture longer than sandy soil. Established plants generally need less frequent but deeper watering than seedlings.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>What is the ideal size for a raised garden bed?</h3>
+                        <p>The most common and practical size is 4 feet wide by 8 feet long, with a height of 10-12 inches. This width allows you to reach the center from either side without stepping on the soil. The length can be adjusted to fit your space. For deep-rooted vegetables like tomatoes and carrots, consider 18-24 inch depth. Use our calculators to determine plant quantities and soil needs for any bed size.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>How do I calculate plant spacing for square foot gardening?</h3>
+                        <p>Square foot gardening divides beds into 1-foot squares, with plant quantities based on mature size. Large plants (tomatoes, peppers) = 1 per square. Medium plants (lettuce, chard) = 4 per square. Small plants (radishes, carrots) = 16 per square. Our calculator automatically determines the optimal spacing pattern and total plant count for your garden size.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>When will my vegetables be ready to harvest?</h3>
+                        <p>Harvest time varies by plant variety and growing conditions. Our Harvest Time Calculator provides estimates based on typical "days to maturity" - the time from planting to harvest. Radishes are ready in 20-30 days, while tomatoes take 60-85 days. The calculator adds the maturity period to your planting date and shows expected harvest windows, helping you plan succession plantings.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>What's the best soil mix for raised bed vegetable gardening?</h3>
+                        <p>A good general mix is 60% topsoil, 30% compost, and 10% drainage material (perlite or vermiculite). For vegetables specifically, try 50% topsoil, 40% compost, and 10% perlite. "Mel's Mix" (popular for square foot gardening) uses equal parts compost, peat moss, and vermiculite. Our Soil Calculator shows the exact quantities needed for each mix type based on your bed dimensions.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>How do I know my USDA hardiness zone?</h3>
+                        <p>USDA hardiness zones are based on average minimum winter temperatures. You can find your zone by entering your ZIP code on the USDA website or selecting from our dropdown menu (Zone 3 = coldest, Zone 10 = warmest). Your zone determines which plants will survive winter in your area and affects your planting schedule timing in our calculator.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Can I use these calculators for container gardening?</h3>
+                        <p>Yes! The plant spacing calculator works for containers - just enter the container's diameter as both length and width for round pots, or actual dimensions for rectangular containers. The soil calculator is perfect for determining how much potting mix you need. For watering calculations, containers typically need more frequent watering than in-ground gardens due to better drainage.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>What vegetables should not be planted together?</h3>
+                        <p>Some plant combinations compete for nutrients or attract similar pests. Avoid: tomatoes with brassicas (cabbage, broccoli), beans with onions, and peppers with beans. Our Companion Planting Guide shows both beneficial and antagonistic pairings. Following these guidelines can increase yields by 20-30% and reduce pest problems naturally.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>How deep should raised garden beds be for different vegetables?</h3>
+                        <p>Minimum depth requirements: Lettuce and herbs = 6-8", Beans and bush crops = 8-10", Tomatoes and peppers = 12-18", Root vegetables (carrots, parsnips) = 12-18". Most raised beds are 10-12 inches deep, which accommodates most vegetables. Our Soil Calculator helps you determine the volume needed for any depth you choose.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Is this garden calculator free to use?</h3>
+                        <p>Yes! All our garden calculators are completely free to use with no registration required. We provide these tools to help gardeners of all experience levels plan successful gardens. Simply enter your measurements and requirements to get instant calculations for plant quantities, soil amounts, planting schedules, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <h2>About Garden Calculator</h2>
+                <p>Garden Calculator is your comprehensive online resource for garden planning tools and calculators. Whether you're growing a small raised bed vegetable garden or planning a large-scale garden, our free calculators help you determine plant quantities, soil requirements, planting schedules, and more.</p>
+                
+                <p>Our mission is to make garden planning accessible to everyone - from beginners starting their first garden to experienced gardeners looking to optimize their yields. All our calculators are based on proven horticultural practices and are regularly updated with the latest gardening research.</p>
+                
+                <h3>Why Use Our Garden Calculators?</h3>
+                <ul>
+                    <li><strong>Save Money:</strong> Calculate exact material needs to avoid overbuying soil and plants</li>
+                    <li><strong>Maximize Yields:</strong> Proper spacing and companion planting increase productivity</li>
+                    <li><strong>Reduce Waste:</strong> Know exactly how much of each material you need</li>
+                    <li><strong>Plan Better:</strong> Schedule plantings for continuous harvests all season</li>
+                    <li><strong>Grow Healthier Plants:</strong> Follow proven spacing and planting guidelines</li>
+                    <li><strong>Free Forever:</strong> All tools are free with no hidden costs or registration</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Garden Calculator</h3>
+                    <p>Free online garden planning tools and calculators to help you grow the perfect garden.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li><a href="#calculators">Plant Quantity Calculator</a></li>
+                        <li><a href="#calculators">Soil Calculator</a></li>
+                        <li><a href="#calculators">Planting Schedule</a></li>
+                        <li><a href="#calculators">Companion Planting</a></li>
+                        <li><a href="#calculators">Harvest Calculator</a></li>
+                        <li><a href="#calculators">Watering Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#guide">Garden Planning Guide</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Searches</h3>
+                    <ul>
+                        <li>Garden space calculator</li>
+                        <li>Raised bed soil calculator</li>
+                        <li>Plant spacing guide</li>
+                        <li>Vegetable garden planner</li>
+                        <li>Companion planting chart</li>
+                        <li>Garden layout calculator</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Garden Calculator. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+                <p>Keywords: grow a garden calculator, garden planning calculator, vegetable garden calculator, raised garden bed calculator, plant spacing calculator, companion planting guide, garden soil calculator, planting schedule calculator</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
