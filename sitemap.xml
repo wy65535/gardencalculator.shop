@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Homepage - Main Garden Calculator -->
+    <url>
+        <loc>https://gardencalculator.shop/</loc>
+        <lastmod>2026-01-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Homepage with index.html -->
+    <url>
+        <loc>https://gardencalculator.shop/index.html</loc>
+        <lastmod>2026-01-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Privacy Policy -->
+    <url>
+        <loc>https://gardencalculator.shop/privacy.html</loc>
+        <lastmod>2026-01-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Calculator Sections -->
+    <url>
+        <loc>https://gardencalculator.shop/#calculators</loc>
+        <lastmod>2026-01-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Guide Section -->
+    <url>
+        <loc>https://gardencalculator.shop/#guide</loc>
+        <lastmod>2026-01-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- FAQ Section -->
+    <url>
+        <loc>https://gardencalculator.shop/#faq</loc>
+        <lastmod>2026-01-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+</urlset>
+
