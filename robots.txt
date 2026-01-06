@@ -1,0 +1,38 @@
+# robots.txt for gardencalculator.shop
+# Garden Calculator - Free Garden Planning Tools
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /privacy.html
+Allow: /styles.css
+Allow: /script.js
+
+# Disallow admin and config files if any exist in future
+Disallow: /admin/
+Disallow: /config/
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://gardencalculator.shop/sitemap.xml
+
+# Crawl delay (optional, helps prevent server overload)
+Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots (optional, uncomment if needed)
+# User-agent: BadBot
+# Disallow: /
+
